@@ -11,28 +11,33 @@ COMMENT=        Another monitoring application, intentend to be simple to use an
 
 DISTFILES+=     ${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}-${GH_TAGNAME}_GH0.tar.gz
 
-EXTRA_DIST=     rrd4j log4j dojo snmp4j json xmlrpcserver xmlrpcserver commonsnet commonsfileupload httpclient mysqlconnectorjava postgresql84 jodatime xmlrpccommon wscommonsutil xmlapis commonsio httpcore commonslogging commonscodec snmp4jagent junit opendmk_jmxremote_optional_jar10b01 hamcrestcore jettyserver jettywebapp jettyjmx slf4japi slf4jlog4j12 javaxservletapi jettyhttp jettyio jettyutil jettyxml jettyservlet jettysecurity
+EXTRA_DIST= rrd4j23 log4j dojo snmp4j json xmlrpcserver commonsnet commonsfileupload httpclient mysqlconnectorjava postgresql84 jodatime base64 xmlrpccommon wscommonsutil xmlapis commonsio httpcore commonslogging commonscodec snmp4jagent junit opendmk_jmxremote_optional_jar10b01 hamcrestcore jettyserver jettywebapp jettyjmx slf4japi slf4jlog4j12 javaxservletapi jettyhttp jettyio jettyutil jettyxml jettyservlet jettysecurity
 
-rrd4j_SUFFIX=   -2.3-SNAPSHOT.jar
-rrd4j_SUBDIR=   org/rrd4j/rrd4j/jars
+rrd4j23_SUFFIX=   -SNAPSHOT.jar
+rrd4j23_SUBDIR=   org/rrd4j/rrd4j/jars
+rrd4j23_REALNAME= rrd4j-2.3
 
 log4j_SUFFIX=   -1.2.17.jar
 log4j_SUBDIR=   log4j/log4j/bundles
+log4j_REALNAME= log4j
 
-dojo_SUFFIX=    -1.9.1.zip
-dojo_SUBDIR=    org/dojotoolkit/dojo/zips
+dojo_SUFFIX=   -1.10.4.zip
+dojo_SUBDIR=   org/dojotoolkit/dojo/zips
+dojo_REALNAME= dojo
 
-snmp4j_SUFFIX=  -2.2.2.jar
-snmp4j_SUBDIR=  org/snmp4j/snmp4j/jars
+snmp4j_SUFFIX=   -2.2.5.jar
+snmp4j_SUBDIR=   org/snmp4j/snmp4j/jars
+snmp4j_REALNAME= snmp4j
 
-json_SUFFIX=    -20140107.jar
-json_SUBDIR=    org/json/json/jars
+json_SUFFIX=   -20140107.jar
+json_SUBDIR=   org/json/json/jars
+json_REALNAME= json
 
 xmlrpcserver_SUFFIX=   -3.1.3.jar
 xmlrpcserver_SUBDIR=   org/apache/xmlrpc/xmlrpc-server/jars
 xmlrpcserver_REALNAME= xmlrpc-server
 
-commonsnet_SUFFIX=   -2.2.jar
+commonsnet_SUFFIX=   -3.3.jar
 commonsnet_SUBDIR=   commons-net/commons-net/jars
 commonsnet_REALNAME= commons-net
 
@@ -40,7 +45,7 @@ commonsfileupload_SUFFIX=   -1.3.1.jar
 commonsfileupload_SUBDIR=   commons-fileupload/commons-fileupload/jars
 commonsfileupload_REALNAME= commons-fileupload
 
-httpclient_SUFFIX=   -4.3.3.jar
+httpclient_SUFFIX=   -4.4.jar
 httpclient_SUBDIR=   org/apache/httpcomponents/httpclient/jars
 httpclient_REALNAME= httpclient
 
@@ -55,6 +60,10 @@ postgresql84_REALNAME= postgresql-8.4
 jodatime_SUFFIX=   -2.3.jar
 jodatime_SUBDIR=   joda-time/joda-time/jars
 jodatime_REALNAME= joda-time
+
+base64_SUFFIX=   -2.3.8.jar
+base64_SUBDIR=   net/iharder/base64/jars
+base64_REALNAME= base64
 
 xmlrpccommon_SUFFIX=   -3.1.3.jar
 xmlrpccommon_SUBDIR=   org/apache/xmlrpc/xmlrpc-common/jars
@@ -72,19 +81,19 @@ commonsio_SUFFIX=   -2.2.jar
 commonsio_SUBDIR=   commons-io/commons-io/jars
 commonsio_REALNAME= commons-io
 
-httpcore_SUFFIX=   -4.3.2.jar
+httpcore_SUFFIX=   -4.4.jar
 httpcore_SUBDIR=   org/apache/httpcomponents/httpcore/jars
 httpcore_REALNAME= httpcore
 
-commonslogging_SUFFIX=   -1.1.3.jar
+commonslogging_SUFFIX=   -1.2.jar
 commonslogging_SUBDIR=   commons-logging/commons-logging/jars
 commonslogging_REALNAME= commons-logging
 
-commonscodec_SUFFIX=   -1.6.jar
+commonscodec_SUFFIX=   -1.9.jar
 commonscodec_SUBDIR=   commons-codec/commons-codec/jars
 commonscodec_REALNAME= commons-codec
 
-snmp4jagent_SUFFIX=   -2.0.6.jar
+snmp4jagent_SUFFIX=   -2.1.1.jar
 snmp4jagent_SUBDIR=   org/snmp4j/snmp4j-agent/jars
 snmp4jagent_REALNAME= snmp4j-agent
 
@@ -164,9 +173,9 @@ EXTRACT_ONLY=   ${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}-${GH_TAGNAME}_GH0.tar.g
 LICENSE=        GPLv3
 
 USE_GITHUB=     yes
-GH_ACCOUNT=     bougie
+GH_ACCOUNT=     fbacchella
 GH_PROJECT=     jrds
-GH_TAGNAME=     d6c98d25fd4b3f882d70e0acb7da0decd8024b11
+GH_TAGNAME=     febd4fd4c7986eba7e510c69fc622fde5d855fc1
 
 DIST_SUBDIR=    ${PORTNAME}
 
