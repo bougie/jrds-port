@@ -209,7 +209,7 @@ do-build:
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/webapp
-	${TAR} -xzf ${WRKSRC}/build/jrds.tar.gz -C ${STAGEDIR}${DATADIR}/webapp
+	${TAR} -xpf ${WRKSRC}/build/jrds.tar -C ${STAGEDIR}${DATADIR}/webapp
 	# Copy config files
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${PATCHDIR}/jrds.properties.sample ${STAGEDIR}${ETCDIR} && \
