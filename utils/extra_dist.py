@@ -25,7 +25,8 @@ if __name__ == "__main__":
 
             print("\n%s_SUFFIX=   -%s" % (dist, suffix))
             print("%s_SUBDIR=   %s" % (dist, subdir))
-            print("%s_REALNAME= %s" % (dist, realname))
+            if realname != dist:
+                print("%s_REALNAME= %s" % (dist, realname))
 
             extra_dist.append(dist)
 
