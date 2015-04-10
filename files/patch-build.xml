@@ -1,0 +1,12 @@
+--- build.xml.orig	2015-04-10 22:45:12.405688506 +0200
++++ build.xml	2015-04-10 22:45:23.028687642 +0200
+@@ -24,9 +24,6 @@
+ 
+ 	<!-- ===================== External jar Classpath =========================== -->
+ 	<path id="external.classpath">
+-		<fileset dir="${appserv.servlet-api}">
+-			<include name="*.jar" />
+-		</fileset>
+ 		<fileset dir="lib">
+ 			<include name="*.jar" />
+ 		</fileset>

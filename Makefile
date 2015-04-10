@@ -202,10 +202,7 @@ post-extract:
 	${MV} ${WRKSRC}/lib/dojo-release-* ${WRKSRC}/lib/dojo
 
 do-build:
-	cd ${WRKSRC} && \
-		ant -Dappserv.home="." -Dappserv.servlet-api="./libjetty"
-	cd ${WRKSRC} && \
-		ant jetty
+	cd ${WRKSRC} && ant && ant jetty
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/webapp
