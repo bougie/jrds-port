@@ -1,0 +1,3 @@
+configdir=%%ETCDIR%%
+rrddir=%%DATADIR%%
+logfile=%%LOGDIR%%/jrds.log

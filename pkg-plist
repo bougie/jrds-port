@@ -1,1 +1,2 @@
 %%DATADIR%%/jrds.war
+@sample %%ETCDIR%%/jrds.properties.sample
