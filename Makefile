@@ -208,8 +208,8 @@ do-build:
 		ant jetty
 
 do-install:
-	${MKDIR} ${STAGEDIR}${DATADIR} && \
-		${INSTALL_DATA} ${WRKSRC}/build/jrds.war ${STAGEDIR}${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}/webapp
+	${TAR} -xzf ${WRKSRC}/build/jrds.tar.gz -C ${STAGEDIR}${DATADIR}/webapp
 	# Copy config files
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${PATCHDIR}/jrds.properties.sample ${STAGEDIR}${ETCDIR} && \
