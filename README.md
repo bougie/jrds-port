@@ -7,8 +7,8 @@ It uses the github repository https://github.com/fbacchella/jrds/.
 Directory Hierarchy
 -------------------
 
-	- port : content of /usr/ports/net-mgmt/jrds directory
-	- utils : tools for generating EXTRA_DIST in Makefile
+- port : content of /usr/ports/net-mgmt/jrds directory
+- utils : tools for generating EXTRA_DIST in Makefile
 
 Build EXTRA_DIST
 ----------------
