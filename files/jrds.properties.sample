@@ -1,5 +1,5 @@
 # $FreeBSD$
 
 configdir=%%ETCDIR%%
-rrddir=%%DATADIR%%
-logfile=%%LOGDIR%%/jrds.log
+rrddir=%%PREFIX%%/var/lib/%%PORTNAME%%
+logfile=%%PREFIX%%/var/log/%%PORTNAME%%/jrds.log

@@ -211,7 +211,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${PATCHDIR}/jrds.properties.sample ${STAGEDIR}${ETCDIR} && \
 		${REINPLACE_CMD} -e 's#%%ETCDIR%%#${ETCDIR}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample && \
-		${REINPLACE_CMD} -e 's#%%VARDIR%%#${PREFIX}/var/lib/${PORTNAME}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample && \
-		${REINPLACE_CMD} -e 's#%%LOGDIR%%#${PREFIX}/var/log/${PORTNAME}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample
+		${REINPLACE_CMD} -e 's#%%PREFIX%%#${PREFIX}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample && \
+		${REINPLACE_CMD} -e 's#%%PORTNAME%%#${PORTNAME}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample
 
 .include <bsd.port.mk>
