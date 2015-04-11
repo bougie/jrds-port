@@ -11,151 +11,140 @@ COMMENT=        Another monitoring application, intentend to be simple to use an
 
 DISTFILES+=     ${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}-${GH_TAGNAME}_GH0.tar.gz
 
-EXTRA_DIST= rrd4j23 log4j dojo snmp4j json xmlrpcserver commonsnet commonsfileupload httpclient mysqlconnectorjava postgresql84 jodatime base64 xmlrpccommon wscommonsutil xmlapis commonsio httpcore commonslogging commonscodec snmp4jagent junit opendmk_jmxremote_optional_jar10b01 hamcrestcore jettyserver jettywebapp jettyjmx slf4japi slf4jlog4j12 javaxservletapi jettyhttp jettyio jettyutil jettyxml jettyservlet jettysecurity
+EXTRA_DIST= base64 commonscodec commonsfileupload commonsio commonslogging commonsnet dojo hamcrestcore httpclient httpcore javaxservletapi jettyhttp jettyio jettyjmx jettysecurity jettyserver jettyservlet jettyutil jettywebapp jettyxml jodatime json junit log4j mysqlconnectorjava opendmk_jmxremote_optional_jar postgresql rrd4j slf4japi slf4jlog4j12 snmp4j snmp4jagent wscommonsutil xmlapis xmlrpccommon xmlrpcserver
 
-rrd4j23_SUFFIX=   -SNAPSHOT.jar
-rrd4j23_SUBDIR=   org/rrd4j/rrd4j/jars
-rrd4j23_REALNAME= rrd4j-2.3
+base64_SUFFIX=                  -2.3.8.jar
+base64_SUBDIR=                  net/iharder/base64/jars
 
-log4j_SUFFIX=   -1.2.17.jar
-log4j_SUBDIR=   log4j/log4j/bundles
-log4j_REALNAME= log4j
+commonscodec_REALNAME=          commons-codec
+commonscodec_SUFFIX=            -1.9.jar
+commonscodec_SUBDIR=            commons-codec/commons-codec/jars
 
-dojo_SUFFIX=   -1.10.4.zip
-dojo_SUBDIR=   org/dojotoolkit/dojo/zips
-dojo_REALNAME= dojo
+commonsfileupload_REALNAME=     commons-fileupload
+commonsfileupload_SUFFIX=       -1.3.1.jar
+commonsfileupload_SUBDIR=       commons-fileupload/commons-fileupload/jars
 
-snmp4j_SUFFIX=   -2.2.5.jar
-snmp4j_SUBDIR=   org/snmp4j/snmp4j/jars
-snmp4j_REALNAME= snmp4j
+commonsio_REALNAME=             commons-io
+commonsio_SUFFIX=               -2.2.jar
+commonsio_SUBDIR=               commons-io/commons-io/jars
 
-json_SUFFIX=   -20140107.jar
-json_SUBDIR=   org/json/json/jars
-json_REALNAME= json
+commonslogging_REALNAME=        commons-logging
+commonslogging_SUFFIX=          -1.2.jar
+commonslogging_SUBDIR=          commons-logging/commons-logging/jars
 
-xmlrpcserver_SUFFIX=   -3.1.3.jar
-xmlrpcserver_SUBDIR=   org/apache/xmlrpc/xmlrpc-server/jars
-xmlrpcserver_REALNAME= xmlrpc-server
+commonsnet_REALNAME=            commons-net
+commonsnet_SUFFIX=              -3.3.jar
+commonsnet_SUBDIR=              commons-net/commons-net/jars
 
-commonsnet_SUFFIX=   -3.3.jar
-commonsnet_SUBDIR=   commons-net/commons-net/jars
-commonsnet_REALNAME= commons-net
+dojo_SUFFIX=                    -1.10.4.zip
+dojo_SUBDIR=                    org/dojotoolkit/dojo/zips
 
-commonsfileupload_SUFFIX=   -1.3.1.jar
-commonsfileupload_SUBDIR=   commons-fileupload/commons-fileupload/jars
-commonsfileupload_REALNAME= commons-fileupload
+hamcrestcore_REALNAME=          hamcrest-core
+hamcrestcore_SUFFIX=            -1.3.jar
+hamcrestcore_SUBDIR=            org/hamcrest/hamcrest-core/jars
 
-httpclient_SUFFIX=   -4.4.jar
-httpclient_SUBDIR=   org/apache/httpcomponents/httpclient/jars
-httpclient_REALNAME= httpclient
+httpclient_SUFFIX=              -4.4.jar
+httpclient_SUBDIR=              org/apache/httpcomponents/httpclient/jars
 
-mysqlconnectorjava_SUFFIX=   -5.1.30.jar
-mysqlconnectorjava_SUBDIR=   mysql/mysql-connector-java/jars
-mysqlconnectorjava_REALNAME= mysql-connector-java
+httpcore_SUFFIX=                -4.4.jar
+httpcore_SUBDIR=                org/apache/httpcomponents/httpcore/jars
 
-postgresql84_SUFFIX=   -702.jdbc4.jar
-postgresql84_SUBDIR=   postgresql/postgresql/jars
-postgresql84_REALNAME= postgresql-8.4
+javaxservletapi_REALNAME=       javax.servlet-api
+javaxservletapi_SUFFIX=         -3.1.0.jar
+javaxservletapi_SUBDIR=         javax/servlet/javax.servlet-api/jars
 
-jodatime_SUFFIX=   -2.3.jar
-jodatime_SUBDIR=   joda-time/joda-time/jars
-jodatime_REALNAME= joda-time
+jettyhttp_REALNAME=             jetty-http
+jettyhttp_SUFFIX=               -9.2.0.v20140526.jar
+jettyhttp_SUBDIR=               org/eclipse/jetty/jetty-http/jars
 
-base64_SUFFIX=   -2.3.8.jar
-base64_SUBDIR=   net/iharder/base64/jars
-base64_REALNAME= base64
+jettyio_REALNAME=               jetty-io
+jettyio_SUFFIX=                 -9.2.0.v20140526.jar
+jettyio_SUBDIR=                 org/eclipse/jetty/jetty-io/jars
 
-xmlrpccommon_SUFFIX=   -3.1.3.jar
-xmlrpccommon_SUBDIR=   org/apache/xmlrpc/xmlrpc-common/jars
-xmlrpccommon_REALNAME= xmlrpc-common
+jettyjmx_REALNAME=              jetty-jmx
+jettyjmx_SUFFIX=                -9.2.0.v20140526.jar
+jettyjmx_SUBDIR=                org/eclipse/jetty/jetty-jmx/jars
 
-wscommonsutil_SUFFIX=   -1.0.2.jar
-wscommonsutil_SUBDIR=   org/apache/ws/commons/util/ws-commons-util/jars
-wscommonsutil_REALNAME= ws-commons-util
+jettysecurity_REALNAME=         jetty-security
+jettysecurity_SUFFIX=           -9.2.0.v20140526.jar
+jettysecurity_SUBDIR=           org/eclipse/jetty/jetty-security/jars
 
-xmlapis_SUFFIX=   -1.0.b2.jar
-xmlapis_SUBDIR=   xml-apis/xml-apis/jars
-xmlapis_REALNAME= xml-apis
+jettyserver_REALNAME=           jetty-server
+jettyserver_SUFFIX=             -9.2.0.v20140526.jar
+jettyserver_SUBDIR=             org/eclipse/jetty/jetty-server/jars
 
-commonsio_SUFFIX=   -2.2.jar
-commonsio_SUBDIR=   commons-io/commons-io/jars
-commonsio_REALNAME= commons-io
+jettyservlet_REALNAME=          jetty-servlet
+jettyservlet_SUFFIX=            -9.2.0.v20140526.jar
+jettyservlet_SUBDIR=            org/eclipse/jetty/jetty-servlet/jars
 
-httpcore_SUFFIX=   -4.4.jar
-httpcore_SUBDIR=   org/apache/httpcomponents/httpcore/jars
-httpcore_REALNAME= httpcore
+jettyutil_REALNAME=             jetty-util
+jettyutil_SUFFIX=               -9.2.0.v20140526.jar
+jettyutil_SUBDIR=               org/eclipse/jetty/jetty-util/jars
 
-commonslogging_SUFFIX=   -1.2.jar
-commonslogging_SUBDIR=   commons-logging/commons-logging/jars
-commonslogging_REALNAME= commons-logging
+jettywebapp_REALNAME=           jetty-webapp
+jettywebapp_SUFFIX=             -9.2.0.v20140526.jar
+jettywebapp_SUBDIR=             org/eclipse/jetty/jetty-webapp/jars
 
-commonscodec_SUFFIX=   -1.9.jar
-commonscodec_SUBDIR=   commons-codec/commons-codec/jars
-commonscodec_REALNAME= commons-codec
+jettyxml_REALNAME=              jetty-xml
+jettyxml_SUFFIX=                -9.2.0.v20140526.jar
+jettyxml_SUBDIR=                org/eclipse/jetty/jetty-xml/jars
 
-snmp4jagent_SUFFIX=   -2.1.1.jar
-snmp4jagent_SUBDIR=   org/snmp4j/snmp4j-agent/jars
-snmp4jagent_REALNAME= snmp4j-agent
+jodatime_REALNAME=              joda-time
+jodatime_SUFFIX=                -2.3.jar
+jodatime_SUBDIR=                joda-time/joda-time/jars
 
-junit_SUFFIX=   -4.11.jar
-junit_SUBDIR=   junit/junit/jars
-junit_REALNAME= junit
+json_SUFFIX=                    -20140107.jar
+json_SUBDIR=                    org/json/json/jars
 
-opendmk_jmxremote_optional_jar10b01_SUFFIX=   -ea.jar
-opendmk_jmxremote_optional_jar10b01_SUBDIR=   org/glassfish/external/opendmk_jmxremote_optional_jar/jars
-opendmk_jmxremote_optional_jar10b01_REALNAME= opendmk_jmxremote_optional_jar-1.0-b01
+junit_SUFFIX=                   -4.11.jar
+junit_SUBDIR=                   junit/junit/jars
 
-hamcrestcore_SUFFIX=   -1.3.jar
-hamcrestcore_SUBDIR=   org/hamcrest/hamcrest-core/jars
-hamcrestcore_REALNAME= hamcrest-core
+log4j_SUFFIX=                   -1.2.17.jar
+log4j_SUBDIR=                   log4j/log4j/bundles
 
-jettyserver_SUFFIX=   -9.2.0.v20140526.jar
-jettyserver_SUBDIR=   org/eclipse/jetty/jetty-server/jars
-jettyserver_REALNAME= jetty-server
+mysqlconnectorjava_REALNAME=    mysql-connector-java
+mysqlconnectorjava_SUFFIX=      -5.1.30.jar
+mysqlconnectorjava_SUBDIR=      mysql/mysql-connector-java/jars
 
-jettywebapp_SUFFIX=   -9.2.0.v20140526.jar
-jettywebapp_SUBDIR=   org/eclipse/jetty/jetty-webapp/jars
-jettywebapp_REALNAME= jetty-webapp
+opendmk_jmxremote_optional_jar_SUFFIX= -1.0-b01-ea.jar
+opendmk_jmxremote_optional_jar_SUBDIR= org/glassfish/external/opendmk_jmxremote_optional_jar/jars
 
-jettyjmx_SUFFIX=   -9.2.0.v20140526.jar
-jettyjmx_SUBDIR=   org/eclipse/jetty/jetty-jmx/jars
-jettyjmx_REALNAME= jetty-jmx
+postgresql_SUFFIX=              -8.4-702.jdbc4.jar
+postgresql_SUBDIR=              postgresql/postgresql/jars
 
-slf4japi_SUFFIX=   -1.7.7.jar
-slf4japi_SUBDIR=   org/slf4j/slf4j-api/jars
-slf4japi_REALNAME= slf4j-api
+rrd4j_SUFFIX=                   -2.3-SNAPSHOT.jar
+rrd4j_SUBDIR=                   org/rrd4j/rrd4j/jars
 
-slf4jlog4j12_SUFFIX=   -1.7.7.jar
-slf4jlog4j12_SUBDIR=   org/slf4j/slf4j-log4j12/jars
-slf4jlog4j12_REALNAME= slf4j-log4j12
+slf4japi_REALNAME=              slf4j-api
+slf4japi_SUFFIX=                -1.7.7.jar
+slf4japi_SUBDIR=                org/slf4j/slf4j-api/jars
 
-javaxservletapi_SUFFIX=   -3.1.0.jar
-javaxservletapi_SUBDIR=   javax/servlet/javax.servlet-api/jars
-javaxservletapi_REALNAME= javax.servlet-api
+slf4jlog4j12_REALNAME=          slf4j-log4j12
+slf4jlog4j12_SUFFIX=            -1.7.7.jar
+slf4jlog4j12_SUBDIR=            org/slf4j/slf4j-log4j12/jars
 
-jettyhttp_SUFFIX=   -9.2.0.v20140526.jar
-jettyhttp_SUBDIR=   org/eclipse/jetty/jetty-http/jars
-jettyhttp_REALNAME= jetty-http
+snmp4j_SUFFIX=                  -2.2.5.jar
+snmp4j_SUBDIR=                  org/snmp4j/snmp4j/jars
 
-jettyio_SUFFIX=   -9.2.0.v20140526.jar
-jettyio_SUBDIR=   org/eclipse/jetty/jetty-io/jars
-jettyio_REALNAME= jetty-io
+snmp4jagent_REALNAME=           snmp4j-agent
+snmp4jagent_SUFFIX=             -2.1.1.jar
+snmp4jagent_SUBDIR=             org/snmp4j/snmp4j-agent/jars
 
-jettyutil_SUFFIX=   -9.2.0.v20140526.jar
-jettyutil_SUBDIR=   org/eclipse/jetty/jetty-util/jars
-jettyutil_REALNAME= jetty-util
+wscommonsutil_REALNAME=         ws-commons-util
+wscommonsutil_SUFFIX=           -1.0.2.jar
+wscommonsutil_SUBDIR=           org/apache/ws/commons/util/ws-commons-util/jars
 
-jettyxml_SUFFIX=   -9.2.0.v20140526.jar
-jettyxml_SUBDIR=   org/eclipse/jetty/jetty-xml/jars
-jettyxml_REALNAME= jetty-xml
+xmlapis_REALNAME=               xml-apis
+xmlapis_SUFFIX=                 -1.0.b2.jar
+xmlapis_SUBDIR=                 xml-apis/xml-apis/jars
 
-jettyservlet_SUFFIX=   -9.2.0.v20140526.jar
-jettyservlet_SUBDIR=   org/eclipse/jetty/jetty-servlet/jars
-jettyservlet_REALNAME= jetty-servlet
+xmlrpccommon_REALNAME=          xmlrpc-common
+xmlrpccommon_SUFFIX=            -3.1.3.jar
+xmlrpccommon_SUBDIR=            org/apache/xmlrpc/xmlrpc-common/jars
 
-jettysecurity_SUFFIX=   -9.2.0.v20140526.jar
-jettysecurity_SUBDIR=   org/eclipse/jetty/jetty-security/jars
-jettysecurity_REALNAME= jetty-security
+xmlrpcserver_REALNAME=          xmlrpc-server
+xmlrpcserver_SUFFIX=            -3.1.3.jar
+xmlrpcserver_SUBDIR=            org/apache/xmlrpc/xmlrpc-server/jars
 
 MASTER_IVY=     http://jrds.fr/maven2/
 .for dist in ${EXTRA_DIST}
