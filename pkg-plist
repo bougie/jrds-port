@@ -1,4 +1,7 @@
 @sample %%ETCDIR%%/jrds.properties.sample
+@dir var/lib/jrds
+@dir var/log/jrds
+@dir var/run/jrds
 %%DATADIR%%/webapp/META-INF/MANIFEST.MF
 %%DATADIR%%/webapp/WEB-INF/lib/base64-2.3.8.jar
 %%DATADIR%%/webapp/WEB-INF/lib/boot.jar

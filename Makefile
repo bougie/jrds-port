@@ -187,6 +187,9 @@ USE_ANT=        yes
 EXTRACT_DEPENDS= unzip:${PORTSDIR}/archivers/unzip
 BUILD_DEPENDS=  ant:${PORTSDIR}/devel/apache-ant
 
+USE_RC_SUBR=    ${PORTNAME}
+SUB_LIST=       JAVA_HOME=${JAVA_HOME}
+
 post-extract:
 	${MKDIR} ${WRKSRC}/lib ${WRKSRC}/libtest ${WRKSRC}/libjetty ${WRKSRC}/build ${WRKSRC}/libprobes
 	# Copy all library in lib dir
@@ -213,5 +216,6 @@ do-install:
 		${REINPLACE_CMD} -e 's#%%ETCDIR%%#${ETCDIR}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample && \
 		${REINPLACE_CMD} -e 's#%%PREFIX%%#${PREFIX}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample && \
 		${REINPLACE_CMD} -e 's#%%PORTNAME%%#${PORTNAME}#g' ${STAGEDIR}${ETCDIR}/jrds.properties.sample
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/var/lib/${PORTNAME} ${STAGEDIR}${PREFIX}/var/log/${PORTNAME} ${STAGEDIR}${PREFIX}/var/run/${PORTNAME}
 
 .include <bsd.port.mk>

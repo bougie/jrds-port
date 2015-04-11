@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: jrds
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# jrds_enable (bool):	Set to NO by default.
+#				Set it to YES to enable jrds.
+# jrds_config (path):	Set to %%ETCDIR%%/jrds.properties
+#				by default.
+# jrds_app (path):      set to %%DATADIR%%/webapp/WEB-INF/lib/boot.jar
+#				by default
+# jrds_pidfile (path):	Set to %%PREFIX%%/var/run/jrds/jrds.pid
+#				by default.
+# jrds_java_home (str):	Set to %%JAVA_HOME%%
+#				by default.
+# jrds_java_opts (str): set to "" by default
+
+. /etc/rc.subr
+
+name=jrds
+rcvar=jrds_enable
+
+load_rc_config $name
+
+: ${jrds_enable:="NO"}
+: ${jrds_config="%%ETCDIR%%/jrds.properties"}
+: ${jrds_app="%%DATADIR%%/webapp/WEB-INF/lib/boot.jar"}
+: ${jrds_pidfile="%%PREFIX%%/var/run/${name}/${name}.pid"}
+: ${jrds_java_home="%%JAVA_HOME%%"}
+: ${jrds_java_opts=""}
+
+pidfile=${jrds_pidfile}
+
+jrds_command="${jrds_java_home}/bin/java"
+jrds_args="-DpropertiesFile=${jrds_config} -jar ${jrds_app}"
+
+procname="${jrds_java_home}/bin/java"
+
+JAVA_OPTS="${jrds_java_opts}"
+JAVA_HOME="${jrds_java_home}"
+export JAVA_OPTS
+export JAVA_HOME
+
+command="/usr/sbin/daemon"
+command_args="-cf -p ${pidfile} ${jrds_command} ${jrds_args}"
+required_file="${jrds_command} ${jrds_config} ${jrds_app}"
+
+run_rc_command "$1"
