@@ -7,7 +7,7 @@ CATEGORIES=     net-mgmt java
 MASTER_SITES=   GH
 
 MAINTAINER=     bougie@appartland.eu
-COMMENT=        Another monitoring application, intentend to be simple to use and extensible
+COMMENT=        Another monitoring application, intentend to be simple to use
 
 DISTFILES+=     ${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}-${GH_TAGNAME}_GH0.tar.gz
 

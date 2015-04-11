@@ -1,3 +1,6 @@
-Another monitoring application, intentend to be simple to use and extensible.
+Jrds is performance collector, much like cacti or munins. But it intends to be 
+more easy to use and able to collect a high number of machines in a very short 
+time. It's fully written in java and avoid call external process to increase 
+performances. It uses RRD4J, a clone of rrdtool written in java. 
 
 WWW: http://jrds.fr
