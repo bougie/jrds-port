@@ -183,9 +183,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/lib ${WRKSRC}/libtest ${WRKSRC}/libjetty ${WRKSRC}/build ${WRKSRC}/libprobes
 	# Copy all library in lib dir
 .for dist in ${DISTFILES}
-.if "${dist}" != "${EXTRACT_ONLY}" && "${dist}" != "dojo${dojo_SUFFIX}"
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/`echo ${dist} | cut -d: -f1` ${WRKSRC}/lib
-.endif
 .endfor
 	# copy a peace of lib in libjetty directory
 	${CP} ${WRKSRC}/lib/log4j* ${WRKSRC}/lib/slf4j-* ${WRKSRC}/lib/javax.servlet* ${WRKSRC}/lib/jetty-* ${WRKSRC}/libjetty
