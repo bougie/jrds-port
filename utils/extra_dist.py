@@ -5,6 +5,10 @@ from collections import OrderedDict
 
 
 def get_dist_name(filename):
+    """
+    Return the "dist" value (a variable name uses in Makefile) for a given
+    filename
+    """
     try:
         dist = re.compile('(-[0-9])').split('-'.join(filename))[0]
     except:
@@ -16,6 +20,10 @@ def get_dist_name(filename):
 
 
 def get_suffix(filename):
+    """
+    Return the suffix (part with version number and extension) for a given
+    filename
+    """
     try:
         suffix = ''.join(re.compile('(-[0-9])').split('-'.join(filename))[1:])
     except:
@@ -64,6 +72,8 @@ if __name__ == "__main__":
         print("EXTRA_DIST= %s\n" % (' '.join(sorted(libs.keys())),))
         for dist, items in libs.items():
             for item in items:
+                # create a string with X spaces to verticaly align values of
+                # dist variables
                 s = nb_cols - len(dist + "_" + item.upper())
                 if s > 20:
                     s = 20
