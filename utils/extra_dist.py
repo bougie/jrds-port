@@ -38,7 +38,6 @@ def parse_lines(lines):
 
         dist = get_dist_name(filename[:len(filename) - 1])
         suffix = get_suffix(filename)
-        # realname = '-'.join(filename[:len(filename) - 1])
         realname = '-'.join(filename).replace(suffix, '')
 
         libs[dist] = OrderedDict()
