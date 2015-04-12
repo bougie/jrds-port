@@ -60,8 +60,13 @@ def parse_lines(lines):
     return _libs
 
 if __name__ == "__main__":
+    if len(sys.argv) == 1:  # No args on command line
+        pkgslist = "packages_jrds.txt"
+    else:
+        pkgslist = sys.argv[1]
+
     try:
-        with open('packages_jrds.txt', 'r') as f:
+        with open(pkgslist, 'r') as f:
             lines = f.read().split('\n')
     except:
         sys.exit(1)
