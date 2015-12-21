@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=       jrds
-PORTVERSION=    20150406
+PORTVERSION=    20151216
 PORTREVISION=   1
 CATEGORIES=     net-mgmt java
 MASTER_SITES=   GH
@@ -11,7 +11,7 @@ COMMENT=        Another monitoring application, intentend to be simple to use
 
 DISTFILES+=     ${GH_ACCOUNT}-${PORTNAME}-${PORTVERSION}-${GH_TAGNAME}_GH0.tar.gz
 
-EXTRA_DIST= base64 commonscodec commonsfileupload commonsio commonslogging commonsnet dojo hamcrestcore httpclient httpcore javaxservletapi jettyhttp jettyio jettyjmx jettysecurity jettyserver jettyservlet jettyutil jettywebapp jettyxml jodatime json junit log4j mysqlconnectorjava opendmk_jmxremote_optional_jar postgresql rrd4j slf4japi slf4jlog4j12 snmp4j snmp4jagent wscommonsutil xmlapis xmlrpccommon xmlrpcserver
+EXTRA_DIST= base64 commonscodec commonsfileupload commonsio commonslogging commonsnet dojo hamcrestcore httpclient httpcore javaxservletapi jettyhttp jettyio jettyjmx jettysecurity jettyserver jettyservlet jettyutil jettywebapp jettyxml jodatime json junit log4j mysqlconnectorjava opendmk_jmxremote_optional_jar postgresql rrd4j slf4japi slf4jlog4j12 snmp4j snmp4jagent vxIPMI wscommonsutil xmlapis xmlrpccommon xmlrpcserver
 
 base64_SUFFIX=                  -2.3.8.jar
 base64_SUBDIR=                  net/iharder/base64/jars
@@ -25,7 +25,7 @@ commonsfileupload_SUFFIX=       -1.3.1.jar
 commonsfileupload_SUBDIR=       commons-fileupload/commons-fileupload/jars
 
 commonsio_REALNAME=             commons-io
-commonsio_SUFFIX=               -2.2.jar
+commonsio_SUFFIX=               -2.4.jar
 commonsio_SUBDIR=               commons-io/commons-io/jars
 
 commonslogging_REALNAME=        commons-logging
@@ -43,10 +43,10 @@ hamcrestcore_REALNAME=          hamcrest-core
 hamcrestcore_SUFFIX=            -1.3.jar
 hamcrestcore_SUBDIR=            org/hamcrest/hamcrest-core/jars
 
-httpclient_SUFFIX=              -4.4.jar
+httpclient_SUFFIX=              -4.5.1.jar
 httpclient_SUBDIR=              org/apache/httpcomponents/httpclient/jars
 
-httpcore_SUFFIX=                -4.4.jar
+httpcore_SUFFIX=                -4.4.3.jar
 httpcore_SUBDIR=                org/apache/httpcomponents/httpcore/jars
 
 javaxservletapi_REALNAME=       javax.servlet-api
@@ -54,81 +54,84 @@ javaxservletapi_SUFFIX=         -3.1.0.jar
 javaxservletapi_SUBDIR=         javax/servlet/javax.servlet-api/jars
 
 jettyhttp_REALNAME=             jetty-http
-jettyhttp_SUFFIX=               -9.2.0.v20140526.jar
+jettyhttp_SUFFIX=               -9.2.13.v20150730.jar
 jettyhttp_SUBDIR=               org/eclipse/jetty/jetty-http/jars
 
 jettyio_REALNAME=               jetty-io
-jettyio_SUFFIX=                 -9.2.0.v20140526.jar
+jettyio_SUFFIX=                 -9.2.13.v20150730.jar
 jettyio_SUBDIR=                 org/eclipse/jetty/jetty-io/jars
 
 jettyjmx_REALNAME=              jetty-jmx
-jettyjmx_SUFFIX=                -9.2.0.v20140526.jar
+jettyjmx_SUFFIX=                -9.2.13.v20150730.jar
 jettyjmx_SUBDIR=                org/eclipse/jetty/jetty-jmx/jars
 
 jettysecurity_REALNAME=         jetty-security
-jettysecurity_SUFFIX=           -9.2.0.v20140526.jar
+jettysecurity_SUFFIX=           -9.2.13.v20150730.jar
 jettysecurity_SUBDIR=           org/eclipse/jetty/jetty-security/jars
 
 jettyserver_REALNAME=           jetty-server
-jettyserver_SUFFIX=             -9.2.0.v20140526.jar
+jettyserver_SUFFIX=             -9.2.13.v20150730.jar
 jettyserver_SUBDIR=             org/eclipse/jetty/jetty-server/jars
 
 jettyservlet_REALNAME=          jetty-servlet
-jettyservlet_SUFFIX=            -9.2.0.v20140526.jar
+jettyservlet_SUFFIX=            -9.2.13.v20150730.jar
 jettyservlet_SUBDIR=            org/eclipse/jetty/jetty-servlet/jars
 
 jettyutil_REALNAME=             jetty-util
-jettyutil_SUFFIX=               -9.2.0.v20140526.jar
+jettyutil_SUFFIX=               -9.2.13.v20150730.jar
 jettyutil_SUBDIR=               org/eclipse/jetty/jetty-util/jars
 
 jettywebapp_REALNAME=           jetty-webapp
-jettywebapp_SUFFIX=             -9.2.0.v20140526.jar
+jettywebapp_SUFFIX=             -9.2.13.v20150730.jar
 jettywebapp_SUBDIR=             org/eclipse/jetty/jetty-webapp/jars
 
 jettyxml_REALNAME=              jetty-xml
-jettyxml_SUFFIX=                -9.2.0.v20140526.jar
+jettyxml_SUFFIX=                -9.2.13.v20150730.jar
 jettyxml_SUBDIR=                org/eclipse/jetty/jetty-xml/jars
 
 jodatime_REALNAME=              joda-time
-jodatime_SUFFIX=                -2.3.jar
+jodatime_SUFFIX=                -2.9.1.jar
 jodatime_SUBDIR=                joda-time/joda-time/jars
 
 json_SUFFIX=                    -20140107.jar
 json_SUBDIR=                    org/json/json/jars
 
-junit_SUFFIX=                   -4.11.jar
+junit_SUFFIX=                   -4.12.jar
 junit_SUBDIR=                   junit/junit/jars
 
 log4j_SUFFIX=                   -1.2.17.jar
 log4j_SUBDIR=                   log4j/log4j/bundles
 
 mysqlconnectorjava_REALNAME=    mysql-connector-java
-mysqlconnectorjava_SUFFIX=      -5.1.30.jar
+mysqlconnectorjava_SUFFIX=      -5.1.37.jar
 mysqlconnectorjava_SUBDIR=      mysql/mysql-connector-java/jars
 
 opendmk_jmxremote_optional_jar_SUFFIX= -1.0-b01-ea.jar
 opendmk_jmxremote_optional_jar_SUBDIR= org/glassfish/external/opendmk_jmxremote_optional_jar/jars
 
-postgresql_SUFFIX=              -8.4-702.jdbc4.jar
+postgresql_SUFFIX=              -9.1-901.jdbc4.jar
 postgresql_SUBDIR=              postgresql/postgresql/jars
 
-rrd4j_SUFFIX=                   -2.3-SNAPSHOT.jar
+rrd4j_SUFFIX=                   -3.0-SNAPSHOT.jar
 rrd4j_SUBDIR=                   org/rrd4j/rrd4j/jars
 
 slf4japi_REALNAME=              slf4j-api
-slf4japi_SUFFIX=                -1.7.7.jar
+slf4japi_SUFFIX=                -1.7.13.jar
 slf4japi_SUBDIR=                org/slf4j/slf4j-api/jars
 
 slf4jlog4j12_REALNAME=          slf4j-log4j12
-slf4jlog4j12_SUFFIX=            -1.7.7.jar
+slf4jlog4j12_SUFFIX=            -1.7.13.jar
 slf4jlog4j12_SUBDIR=            org/slf4j/slf4j-log4j12/jars
 
-snmp4j_SUFFIX=                  -2.2.5.jar
+snmp4j_SUFFIX=                  -2.3.4.jar
 snmp4j_SUBDIR=                  org/snmp4j/snmp4j/jars
 
 snmp4jagent_REALNAME=           snmp4j-agent
-snmp4jagent_SUFFIX=             -2.1.1.jar
+snmp4jagent_SUFFIX=             -2.1.3.jar
 snmp4jagent_SUBDIR=             org/snmp4j/snmp4j-agent/jars
+
+vxIPMI_SUFFIX=                  -1.0.17.2-SNAPSHOT.jar
+vxIPMI_SUBDIR=                  fr/jrds/verax/vxIPMI/jars
 
 wscommonsutil_REALNAME=         ws-commons-util
 wscommonsutil_SUFFIX=           -1.0.2.jar
@@ -164,12 +167,12 @@ LICENSE=        GPLv3
 USE_GITHUB=     yes
 GH_ACCOUNT=     fbacchella
 GH_PROJECT=     jrds
-GH_TAGNAME=     febd4fd4c7986eba7e510c69fc622fde5d855fc1
+GH_TAGNAME=     3cf9c73a8995581ee6c57712fb5ac0a5861136ed
 
 DIST_SUBDIR=    ${PORTNAME}
 
 USE_JAVA=       yes
-JAVA_VERSION=   1.7+
+JAVA_VERSION=   1.7
 JAVA_BUILD=     yes
 JAVA_RUN=       yes
 USE_ANT=        yes
